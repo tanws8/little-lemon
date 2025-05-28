@@ -1,0 +1,208 @@
+.cardList {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap; /* Allow cards to wrap */
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.card {
+  position: relative;
+  width: 350px;
+  height: 520px;
+  background: #ccc;
+  margin: 20px;
+  border-radius: 40px;
+  overflow: hidden;
+  pointer-events: none;
+  transition: all 0.3s ease; /* Smooth transition on resize */
+}
+
+/* The before pseudo-element of card */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+.cardContainer .card .icon {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardContainer .card .icon img {
+  filter: invert(1);
+  max-width: 120px;
+  z-index: 10;
+}
+
+.cardContainer .card .icon::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #ccc;
+}
+
+.cardContainer .card .icon::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #333;
+  border-bottom-left-radius: 80px;
+}
+
+.cardContainer .card:nth-child(1) .icon,
+.cardContainer .card:nth-child(1) .icon::after,
+.cardContainer .card:nth-child(1) .content::before,
+.cardContainer .card:nth-child(1) .content .text tag {
+  background: #0cc58e;
+}
+
+.cardContainer .card .content,
+.cardContainer .card .icon::before,
+.cardContainer .card .content::after {
+  background: #effaf0 !important;
+}
+
+.cardContainer .card .content {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardContainer .card .content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #333;
+}
+
+.cardContainer .card .content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #ccc;
+  border-top-right-radius: 80px;
+}
+
+.cardContainer .card .content .text {
+  z-index: 1;
+  text-align: center;
+  padding: 20px 30px;
+  z-index: 1;
+}
+
+.cardContainer .card .content .text h2 {
+  font-weight: 500;
+  font-size: 1.7em;
+  color: #333;
+}
+
+.cardContainer .card .content .text p {
+  font-weight: 400;
+  color: #333;
+  margin: 10px 0;
+}
+
+.cardContainer .card .content .text tag {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #333;
+  color: #fff;
+  margin-top: 10px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+/* Media Queries */
+
+/* Mobile devices (portrait) */
+@media (max-width: 600px) {
+  .cardContainer {
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 380px;
+    margin: 10px 0;
+    height: auto;
+  }
+
+  .card .content .text h2 {
+    font-size: 1.5em;
+  }
+
+  .card .content .text p {
+    font-size: 1em;
+  }
+
+  .card .content .text tag {
+    padding: 10px 20px;
+  }
+}
+
+/* Tablets (portrait) */
+@media (max-width: 768px) {
+  .cardContainer {
+    justify-content: space-evenly;
+    padding: 20px;
+  }
+
+  .card {
+    height: 500px;
+    margin: 10px;
+  }
+}
+
+/* Medium screens (landscape tablets, small desktops) */
+@media (max-width: 1024px) {
+  .cardContainer {
+    justify-content: space-between;
+  }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1200px) {
+  .cardContainer {
+    justify-content: space-evenly;
+  }
+
+  .card {
+    width: 350px;
+    height: 520px;
+  }
+}
