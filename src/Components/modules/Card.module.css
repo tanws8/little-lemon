@@ -9,19 +9,23 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 40px 0;
+  margin: 30px 0;
 }
 
 .card {
   position: relative;
   width: 350px;
   height: 520px;
-  background: #ccc;
   margin: 20px;
   border-radius: 40px;
   overflow: hidden;
-  pointer-events: none;
   transition: all 0.3s ease; /* Smooth transition on resize */
+  z-index: 1;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  z-index: 2;
 }
 
 /* The before pseudo-element of card */
@@ -47,9 +51,10 @@
 }
 
 .cardContainer .card .icon img {
-  filter: invert(1);
-  max-width: 120px;
+  width: 100%;
+  height: 100%;
   z-index: 10;
+  object-fit: cover;
 }
 
 .cardContainer .card .icon::before {
@@ -86,37 +91,6 @@
   background: #effaf0 !important;
 }
 
-.cardContainer .card .content {
-  position: relative;
-  width: 100%;
-  height: 50%;
-  background: #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.cardContainer .card .content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  background: #333;
-}
-
-.cardContainer .card .content::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  background: #ccc;
-  border-top-right-radius: 80px;
-}
-
 .cardContainer .card .content .text {
   z-index: 1;
   text-align: center;
@@ -136,11 +110,10 @@
   margin: 10px 0;
 }
 
-.cardContainer .card .content .text tag {
+.cardContainer .card .content .text a {
+  color: black;
   display: inline-block;
   padding: 12px 25px;
-  background: #333;
-  color: #fff;
   margin-top: 10px;
   border-radius: 30px;
   text-decoration: none;

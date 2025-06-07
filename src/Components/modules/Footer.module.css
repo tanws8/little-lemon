@@ -1,0 +1,38 @@
+.footer {
+  background-color: #495e57;
+}
+
+.footer h5 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer p,
+.footer small {
+  margin-bottom: 0.5rem;
+}
+
+.link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.socialIcons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcons a {
+  color: #ffffff;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.socialIcons a:hover {
+  color: #adb5bd;
+}

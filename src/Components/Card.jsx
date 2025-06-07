@@ -7,13 +7,16 @@ export default function Card({ specialMeals }) {
         <div key={id} className={styles.cardContainer}>
           <div className={styles.card}>
             <div className={styles.icon}>
-              <img src="" alt="" />
+              <img src={image} alt={name} />
             </div>
             <div className={styles.content}>
               <div className={styles.text}>
                 <h2>{name}</h2>
+                <h5>{price}</h5>
                 <p>{description}</p>
-                <tag href="#">Read More</tag>
+                <a className="secondary-color-orange" href="/">
+                  Read More
+                </a>
               </div>
             </div>
           </div>

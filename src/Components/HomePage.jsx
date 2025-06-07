@@ -1,11 +1,17 @@
 import Hero from "./Hero";
-import Highlights from "./Highlights";
+import Specials from "./Specials";
+import CustomersSay from "./CustomersSay";
+import Chicago from "./Chicago";
+import Footer from "./Footer";
 
 export default function HomePage() {
   return (
     <div>
       <Hero />
-      <Highlights />
+      <Specials />
+      <CustomersSay />
+      <Chicago />
+      <Footer />
     </div>
   );
 }

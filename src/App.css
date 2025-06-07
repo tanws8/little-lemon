@@ -1,5 +1,18 @@
+body {
+  font-family: "Karla" !important;
+}
+
 .App {
   text-align: center;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a,
+Button {
+  border: none !important;
 }
 
 .App-logo {
@@ -35,4 +48,33 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.primary-color-green {
+  color: #edefee;
+  background-color: #495e57 !important;
+}
+
+.primary-color-yellow {
+  background-color: #f4ce14 !important;
+}
+
+.secondary-color-orange {
+  background-color: #ee9972;
+}
+
+.secondary-color-beige {
+  background-color: #fbdabb;
+}
+
+.secondary-color-white {
+  background-color: #edefee;
+}
+
+.secondary-color-black {
+  background-color: #333333;
+}
+
+.hero-section-btn {
+  color: black !important;
 }

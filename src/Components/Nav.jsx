@@ -37,7 +37,7 @@ export default function Navigation() {
       }`}
     >
       <Container>
-        <Navbar.Brand href="#hero">
+        <Navbar.Brand href="/">
           <img
             src="./images/logo.png"
             className="logo"
